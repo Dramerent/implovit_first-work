@@ -1,0 +1,433 @@
+
+/* В РАЗРАБОТКЕ!!! */
+
+
+
+
+
+
+
+.advertisements-beta{
+    width: 1280px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 630px);
+    grid-template-rows: 294px 30px;
+    grid-template-areas: 
+    ". ."
+    ".";
+    justify-content: space-between;
+    margin: 33px auto 0 auto ;
+}
+.advertisements-beta__advertisement{
+    display: flex;
+    width: auto;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+.advertisements-beta__nav{
+    margin-top: auto;
+}
+.dvertisements-beta__nav_disabled{
+    display: none;
+}
+.advertisement__beautika-img{
+    width: 393px;
+    height: 294px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.advertisements-beta__advertisement_background-blue{
+    background-color: rgba(107, 199, 211, 1);
+}
+.h4_white{
+    color:white
+}
+.advertisement__zagolovok_first{
+    width: 277px;
+    
+}
+.advertisement__zagolovok{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 62px 0 0 35px;
+    position: relative;
+    z-index: 2;
+    
+}
+.advertisement__h4{
+    margin-top: 10px;
+}
+.advertisement__more-group{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+.advertisement__arrow{
+    width: 22px;
+    height: 17px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.advertisements-beta__advertisement_background-green{
+    background-color:rgba(151, 224, 197, 1);
+}
+.advertisement__sale-img{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.advertisement__zagolovok_second-size{
+    width: 251px;
+    
+}
+.advertisements-beta__nav_disabled{
+    display: none;
+}
+.advertisements-beta__adress{
+    margin:auto 0 0 auto;
+    grid-area: 2/2/3/3;
+}
+/* -------------------------------------- */
+.full-katalog__zagolovok{
+    width: 1280px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+.full-katalog{
+    width: 1280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 45px auto 0 auto;
+}
+.full-katalog__list{
+    width: 11px;
+    height: 8px;
+    display: flex;
+}
+.full-katalog__params{
+    width: 315px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.full-filters__zagolovok{
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.full-filters__Line{
+    width: fit-content;
+    height: 3px;
+}
+.full-filters{
+    width: 378px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.full-filters__filter{
+    width: fit-content;
+    height: 47px;
+    text-align: center;
+    background-color: white;
+    padding: 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 4px;
+    position: relative;
+
+}
+.links-menu_blue{
+    color:rgba(70, 192, 193, 1);
+}
+
+.abc-filter{
+    width: 41px;
+    min-height: 47px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+}
+.full-filters__filter:hover{
+    background-color: rgba(160, 220, 228, 1);
+    color: white;
+}
+.full-katalog__Main-site{
+    margin: 32px auto 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.full-filters__filters-first{
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+}
+.full-filters__filters-second{
+    width: 378px;
+    display: flex;
+    flex-direction: column;
+}
+.full-filters__group-one{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    max-height: 506px;
+    
+}
+.full-filters__group{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    max-height: 535px;
+    
+    margin-top: 52px;
+}
+.abc-choise-text_blue-clickable{
+    color:rgba(70, 192, 193, 1);
+    cursor: pointer;
+}
+
+.full-filters__close{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 15px;
+    bottom: calc(50% - 10px);
+    display: none;
+    
+    
+}
+.full-filters__filters-group{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 467px;
+    overflow-y: scroll;
+}
+.full-filters__close_anactive{
+    display: none;
+}
+.full-filters__close img:hover{
+content: url("../images/close_types/Property\ 1=Variant2.svg");
+}
+.abc-filters{
+    display: inline-block;
+    width: fit-content;
+    height: min-content;
+    margin-top: 10px;
+}
+.full-katalog__products{
+    display: grid;
+    width: 840px;
+    justify-content: space-between;
+    grid-template-areas: 
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    ". ."
+    "nav nav";
+    grid-template-columns: repeat(2, 400px);
+    
+}
+.full-katalog__kardiola-sale{
+    margin-top: 42px;
+}
+.full-katalog__nav-group{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: nav;
+    margin-top: 45px;
+}
+.full-katalog__nav{
+    width: 392px;
+    height: 46px;
+}
+.button-text_white{
+    color:white
+}
+.full-katalog__button{
+    width: 182px;
+    height: 46px;
+    display: flex;
+    background-color: rgba(70, 192, 193, 1);
+    border-radius: 50px;
+    border-color: white;
+    border-width: 1px;
+    border-style:solid;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    
+}
+.full-katalog__button:hover{
+    background-color: rgba(246, 246, 246, 1);
+    border-color: rgba(70, 192, 193, 1);
+}
+@media screen and (max-width:1500px){
+    .advertisements-beta__advertisement{
+        width: 570px;
+        height: 294px;
+    }
+    .advertisements-beta{
+        width: 1160px;
+        grid-template-columns: repeat(2, 570px);
+    }
+    .advertisement__zagolovok_first{
+        width: 214px;
+        height: auto;
+    }
+    .advertisement__zagolovok{
+        margin: 40px 0 0 35px;
+        
+    }
+    /* ---------------- */
+    .full-katalog__products{
+        width: 766px;
+        grid-template-columns: repeat(2, 372px);
+    }
+    .full-katalog{
+        width: 1150px;
+    }
+   
+    .full-katalog__zagolovok{
+        width: 100%;
+    }
+    
+   
+    .full-filters__filters-group
+    {
+        width:380px;
+    }
+    .full-filters__filters-first,
+    .full-filters__filters-second{
+        width: 360px;
+    }
+    .full-katalog__Main-site{
+        margin-top: 21px;
+    }
+    .full-katalog__products{
+        margin-top: 28px;
+    }
+    .full-katalog__kardiola-sale{
+        margin-top: 22px;
+    }
+}
+
+@media screen and (max-width:1279px){
+    .advertisements-beta__advertisement{
+        width: 720px;
+        height: 260px;
+
+    }
+    .advertisements-beta{
+        width: fit-content;
+        height: fit-content;
+        margin-top: 50px;
+    }
+    .advertisements-beta{
+        grid-template-columns: 720px;
+        grid-template-rows: 260px;
+    }
+    .advertisements-beta__advertisement_background-green{
+        display: none;
+    }
+    .advertisement__zagolovok{
+        margin: 20px 0 0 35px;
+        
+    }
+}
+@media screen and (max-width:960px) {
+    .advertisements-beta{
+        grid-template-columns: 720px;
+        grid-template-rows: 260px 43px 40px;
+        grid-template-areas: 
+        "."
+        "."
+        ".";
+        
+    }
+    .advertisements-beta__nav_disabled{
+        display: flex;
+    }
+   .advertisements-beta__adress{
+        grid-area: 3/1/4/2;
+        margin: auto auto 0 auto;
+        
+   }
+
+    
+}
+@media screen and (max-width:720px) {
+    .advertisement__beautika-img img{
+        content: url("images/adds/addOne/Group\ 9511.png");
+    }
+    .advertisement__beautika-img{
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 320px;
+        height: 126px;
+    }
+    .advertisements-beta__advertisement{
+        width: 320px;
+        height: 150px;
+    }
+    .advertisements-beta{
+        width: 320px;
+        height: 150px;
+        grid-template-columns: 320px;
+        
+        grid-template-rows: 150px 48px 32px;
+        margin-top: 20px;
+    }
+    .advertisements-beta__adress{
+        margin: auto 0 0 auto;
+    }
+    .advertisement__h4_enable{
+        display: none;
+        
+    }
+    .advertisement__zagolovok{
+        margin:10px auto 0 auto;
+        width: 100%;
+        text-align: center;
+
+    }
+    .advertisement__zagolovok .paragrapf{
+        font-size:18px;
+    }
+}

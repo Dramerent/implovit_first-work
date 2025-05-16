@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- шрифт Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header class = "header" onclick="baseHeaderOff()" > 
+        <div class="stop-scroll"></div>
+        <a class = "header__NameLogo-And-Search">
+            <div onclick="ReturnToHomePage()" class="NameLogo">
+                    <img src="images/Name-Logo.svg" >
+            </div>
+            <div class="Search-Group">
+                <div class="SearchLine Search-Group__SearchLine" onclick="changeActiveSearch(this)">
+                    <div class="Anactive-Lupa Search-Group__Anactive-Lupa">
+                        
+                        <img class = "Lupa__Img" src="images/search_types/Property 1=Default.svg" >
+                    </div>
+                    <input class = "Search-Group__Input" placeholder="Поиск товара"  type="text"/>
+                    <div class="Lupa Search-Group__Lupa Search-Group__Lupa_Enabled  ">
+                        <img class = "Lupa__Img" src="images/search_types/Property 1=Default.svg" >
+                    </div>
+                    <div onclick = "ret()"class="Anactive-close Search-Group__Anactive-close ">
+                        <img class = "close__Img" src="images/close_types/Property 1=Default (1).svg" >
+                    </div>
+                    
+                   
+                        
+                </div>
+                
+                <div class="Like Search-Group__like">
+                    <img class = "Like__Img"src="images/like_types/like.svg" >
+                </div>
+            </div>
+            
+        </a>
+        <div class="Line">
+        </div>
+        <nav class="Header__Menu">
+            <a class="Header-Menu__Products"  onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <div class="Header-menu__Group ">
+                    <div class="3lines">
+                        <img class = "3lines__img" src="images/3_lines.svg" >
+                    </div>
+                    <p class = "menu-text">Каталог товаров</p>
+                </div>
+                
+            </a>
+            <a  target="_blank" class="Header-Menu__Brends" href = "brends.html" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Наши бренды</p>
+            </a>
+            <a  target="_blank"class="Header-Menu__Sales" href = "/"onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Акции</p>
+            </a>
+            <a  target="_blank"class="Header-Menu__ABC" href = "/"onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Азбука здоровья</p>
+            </a>
+            <a  target="_blank"class="Header-Menu__News" href = "/"onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Статьи</p>
+            </a>
+            <a  target="_blank"class="Header-Menu__Company" href = "/"onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">О компании</p>
+            </a>
+            <a  target="_blank"class="Header-Menu__Buy" href = "/"onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <div class="Header-menu__Buy-Group ">
+                    <div class="map">
+                        <img class = "map__img" src="images/map_place.svg" >
+                    </div>
+                    <p class = "menu-text">Где купить</p>                
+                </div>
+            </a>
+            <a  target="_blank"class="Header-Menu__Contacts" href = "/" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Контакты</p>
+            </a>
+           
+        </nav>
+        <nav class="header__Group Header__Group_Disabled" onclick = "baseHeaderOn()">
+            <a class="Logo-Small">
+                <img class = "Logo-small__img" src="images/header_closed/Group 8754.svg" >
+            </a>
+            <a class="Header-Group__Products"  onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <div class="Header-menu__Group ">
+                    <div class="3lines">
+                        <img class = "3lines__img" src="images/3_lines.svg" >
+                    </div>
+                    <p class = "menu-text">Каталог товаров</p>
+                </div>
+            </a>
+            <a  class="header-group__Brends" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Наши бренды</p>
+            </a>
+            <a class = "header-group__Sales" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Акции</p>
+            </a>
+            <a  class = "header-group__ABC" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Азбука здоровья</p>
+            </a>
+            <a  class = "header-group__News" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">Статьи</p>
+            </a>
+            <a class = "header-group__Company" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class = "menu-text">О компании</p>
+            </a>
+            <a  class = "header-group__Buy" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <div class="Header-menu__Buy-Group ">
+                    <div class="map">
+                        <img class = "map__img" src="images/map_place.svg" >
+                    </div>
+                    <p class = "menu-text">Где купить</p>                
+                </div>
+            </a>
+            <a  class = "header-group__contacts" onmouseover="menuover(this)" onmouseleave="menuleave(this)">
+                <p class ="menu-text">Контакты</p>
+            </a>
+            <a onclick = "headerGroupDisable()" class="Lupa header-group__Lupa header-group__Lupa_Enabled  ">
+                <img class = "Lupa__Img" src="images/search_types/Property 1=Default.svg" >
+            </a>
+            <a class="Like header-group__like">
+                <img class = "Like__Img"src="images/like_types/Property 1=Variant2 (2).svg" >
+            </a>
+            <div class="Search-Group Search-Group_anactive">
+                <div class="SearchLine Search-Group__SearchLine" onclick="">
+                    <div class="Anactive-Lupa search-Group__Anactive-Lupa">
+                        
+                        <img class = "Lupa__Img" src="images/search_types/Property 1=Default.svg" >
+                    </div>
+                    <input  class = "Search-Group__Input" placeholder="Поиск товара" onclick = "text()" type="text"/>
+                    <div class="Lupa Search-Group__Lupa Search-Group__Lupa_Enabled  ">
+                        <img class = "Lupa__Img" src="images/search_types/Property 1=Default.svg" >
+                    </div>     
+                </div>
+                <div onclick = "headerGroupEnable()"class="close Search-Group__close ">
+                        <img class = "close__Img" src="images/close_types/Property 1=Default (1).svg" >
+                </div>
+                
+            </div>
+
+
+        </nav>
+        <div class="header__Name-Logo header__Name-Logo_Disabled">
+            <img src="images/NameLogo1280.svg" >
+        </div>
+    </header>
+    <div class="katalog-block">
+       
+        <div class="history">
+            <a target="_blank" href = "index.html"class="home-img">
+                <img src="images/home/home.png" >
+            </a>
+            <p class = "podpis podpis_gray">&nbsp; /&nbsp;<span class = "active-page">Каталог товаров</span></p>
+        </div> 
+        <div class="advertisements-beta">
+            <div class="advertisements-beta__advertisement advertisements-beta__advertisement_background-blue" onmouseover="addAnimFirstType(this)" onmouseleave="disAnimFirstType(this)">
+                <div class="advertisement__beautika-img">
+                    <img src="images/adds/addOne/Group 9192 (1).svg">
+                </div>
+                <div class="advertisement__zagolovok advertisement__zagolovok_first">
+                    <p class = "paragrapf advertisement__paragraph paragrapf_white">Третий товар 
+                        в подарок!
+                    </p>
+                    <p class = "h4 advertisement__h4 h4_white advertisement__h4_enable">для бренда Beauteka</p>
+                    
+                    <div class="advertisement__more-group">
+                        <a href = "." target="_blank" class = "h4 advertisement-more-group__h4 h4_white">Подробнее</a>
+                        <div class="advertisement__arrow">
+                            <img src="images/adds/arrow1.svg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="advertisements-beta__advertisement advertisements-beta__advertisement_background-green" onmouseover="addAnimFirstType(this)" onmouseleave="disAnimFirstType(this)">
+                <div class="advertisement__sale-img">
+                    <img src="images/adds/addTwo/Ellipse 62.png">
+                </div>
+                <div class="advertisement__zagolovok advertisement__zagolovok_second-size">
+                    <p class = "paragrapf advertisement__paragraph paragrapf_white">30% скидка</p>
+                    <p class = "h4 advertisement__h4 h4_white advertisement__h4_enable">в сезон ОРВИ и простуд
+                        на все витамины С</p>
+                    
+                    <div class="advertisement__more-group">
+                        <a target="_blank" href = "." class = "h4 advertisement-more-group__h4 h4_white">Подробнее</a>
+                        <div class="advertisement__arrow">
+                            <img src="images/adds/arrow1.svg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="nav advertisements-beta__nav advertisements-beta__nav_disabled">
+                <img src="images/управление слайдером.png" alt="">
+            </div>
+            <p class = "adress advertisements-beta__adress adress_blue">> Все акции</p>
+           
+        </div>
+        <div class="full-katalog">
+            <div class="full-katalog__zagolovok">
+                <p class = "zagolovok">Каталог продукции</p>
+                <div class="full-katalog__params">
+                    <p class = "anons ">Сортировка</p>
+                    <p class = "button-text">Сначала популярные</p>
+                    <div class="full-katalog__list">
+                        <img src="images/adds/Vector 5.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="full-katalog__Main-site">
+                <div class="full-filters">
+                    <div class="full-filters__group-one">
+                        <div class="full-filters__zagolovok">
+                            <p class = "adress">Показать по направлениям</p>
+                            <div class="Line">
+                                <img src="images/Line 1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="full-filters__filters-group"> 
+                            <div class="full-filters__filters-first"> 
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Антиоксиданты</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Антистресс</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Борьба с вредными привычками</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Витамины и минералы</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для горла</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для детей</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для иммунитета и в сезон простуд</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для кожи и волос</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)"  class="full-filters__filter" >
+                                <p class = "links-menu">Для памяти и внимания и работы мозга</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для горла</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для детей</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для памяти и внимания и работы мозга</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для горла</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter" >
+                                <p class = "links-menu">Для детей</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                           
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                    <div class="full-filters__group">
+                        <div class="full-filters__zagolovok">
+                            <p class = "adress">По активному компоненту</p>
+                            <div class="Line">
+                                <img src="images/Line 1.svg" alt="">
+                            </div> 
+                            <div class="abc-filters">
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">А</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Б</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">В</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Г</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Д</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Е</span>
+
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ж</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">З</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">И</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">К</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Л</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">М</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Н</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">О</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">П</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Р</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">С</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Т</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">У</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ф</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Х</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ц</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ч</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ш</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Щ</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Э</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ю</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Я</span>
+
+
+                            </div>
+                        </div>
+                        <div class="full-filters__filters-group"> 
+                           
+                            <div class="abc-filter">
+                            <p class = "links-menu links-menu_blue">А</p>
+                            </div>
+                            <div class="full-filters__filters-second"> 
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Алтея экстракт</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Аскорбиновая кислота</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Витамины и минералы</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Анис обыкновенный</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            
+                           
+                            </div>
+                            <div class="abc-filter">
+                            <p class = "links-menu links-menu_blue">Б</p>
+                            </div>
+                            <div class="full-filters__filters-second"> 
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Бета-каротин</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Бионин</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Бузины цветков экстракт</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Анис обыкновенный</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            
+                           
+                            </div>
+                            <div class="abc-filter">
+                            <p class = "links-menu links-menu_blue">В</p>
+                            </div>
+                            <div class="full-filters__filters-second"> 
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Бета-каротин</p>
+                            </div>
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Бионин</p>
+                            </div>
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Бузины цветков экстракт</p>
+                            </div>
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Анис обыкновенный</p>
+                            </div>
+                            
+                           
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                    <div class="full-filters__group">
+                        <div class="full-filters__zagolovok">
+                            <p class = "adress">По названию</p>
+                            <div class="Line">
+                                <img src="images/Line 1.svg" alt="">
+                            </div> 
+                            <div class="abc-filters">
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">А</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Б</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">В</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Г</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Д</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Е</span>
+
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ж</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">З</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">И</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">К</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Л</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">М</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Н</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">О</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">П</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Р</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">С</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Т</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">У</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ф</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Х</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ц</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ч</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ш</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Щ</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Э</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Ю</span>
+                            <span onclick = "abcChoise(this)" class = "abc-choise-text abc-choise-text_blue-clickable">Я</span>
+
+
+                            </div>
+                        </div>
+                        <div class="full-filters__filters-group"> 
+                           
+                            <div class="abc-filter">
+                            <p class = "links-menu links-menu_blue">А</p>
+                            </div>
+                            <div class="full-filters__filters-second"> 
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Алтея экстракт</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Аскорбиновая кислота</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Витамины и минералы</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Анис обыкновенный</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            
+                           
+                            </div>
+                            <div class="abc-filter">
+                            <p class = "links-menu links-menu_blue">Б</p>
+                            </div>
+                            <div class="full-filters__filters-second"> 
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Бета-каротин</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Бионин</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Бузины цветков экстракт</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            <div onclick = "filterChoice(this)" class="full-filters__filter">
+                                <p class = "links-menu">Анис обыкновенный</p>
+                                <div class="full-filters__close ">
+                                    <img src="images/close_types/Property 1=Default.svg" alt="">
+                                </div>
+                            </div>
+                            
+                           
+                            </div>
+                            <div class="abc-filter">
+                            <p class = "links-menu links-menu_blue">В</p>
+                            </div>
+                            <div class="full-filters__filters-second"> 
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Бета-каротин</p>
+                            </div>
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Бионин</p>
+                            </div>
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Бузины цветков экстракт</p>
+                            </div>
+                            <div class="full-filters__filter">
+                                <p onclick = "filterChoice(this)" class = "links-menu">Анис обыкновенный</p>
+                            </div>
+                            
+                           
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                   
+                </div>
+                <div class="full-katalog__products">
+                    <div class="kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_pink"><p class = "stock-text stock-text_white">новинка</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiolla-kardiolla.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiolla-kardiolla.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiolla-kardiolla.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">400 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">добавка для здоровья сердца и активной жизни, 
+                                    в составе которой преобладают натуральные экстракты лекарственных
+                                    растений и важные элементы, необходимые для заботы о сердце и сосудах.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                <div class="abc">
+                                     <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (1).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Родиола розовая</p>                          
+                                </div>
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                    </div>
+                    <div class="kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_green"><p class = "stock-text stock-text_white">Акция</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiollaGroup.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiollaGroup.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiollaGroup.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Сироп Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">добавка для здоровья сердца и активной жизни, в составе которой 
+                                    преобладают натуральные экстракты лекарственных растений и важные элементы, 
+                                    необходимые для заботы о сердце и сосудах.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                <div class="abc">
+                                     <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (1).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Родиола розовая</p>                          
+                                </div>
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>                       
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_persik"><p class = "stock-text stock-text_white">топ продаж</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Омега-3 Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">700 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистой системы, хорошего самочувствия и ежедневной активности.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                                                     
+    
+                                </div>
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                            
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_persik"><p class = "stock-text stock-text_white">топ продаж</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Омега-3 Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">700 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистой системы, хорошего самочувствия и ежедневной активности.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.svg" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                                     
+    
+                                </div>
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                            
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_pink"><p class = "stock-text stock-text_white">новинка</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiolla-kardiolla.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiolla-kardiolla.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiolla-kardiolla.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">400 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">добавка для здоровья сердца и активной жизни, 
+                                    в составе которой преобладают натуральные экстракты лекарственных
+                                    растений и важные элементы, необходимые для заботы о сердце и сосудах.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                <div class="abc">
+                                     <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (1).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Родиола розовая</p>                          
+                                </div>
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_green"><p class = "stock-text stock-text_white">Акция</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiollaGroup.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiollaGroup.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/kardiollaGroup.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Сироп Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">добавка для здоровья сердца и активной жизни, в составе которой 
+                                    преобладают натуральные экстракты лекарственных растений и важные элементы, 
+                                    необходимые для заботы о сердце и сосудах.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                <div class="abc">
+                                     <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (1).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Родиола розовая</p>                          
+                                </div>
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>                       
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_persik"><p class = "stock-text stock-text_white">топ продаж</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Омега-3 Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">700 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистой системы, хорошего самочувствия и ежедневной активности.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                                                     
+    
+                                </div>
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                            
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_persik"><p class = "stock-text stock-text_white">топ продаж</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Омега-3 Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">700 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистой системы, хорошего самочувствия и ежедневной активности.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.svg" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                                     
+    
+                                </div>
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                            
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_persik"><p class = "stock-text stock-text_white">топ продаж</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Омега-3 Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">700 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистой системы, хорошего самочувствия и ежедневной активности.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152 (2).png" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Витамин С</p>                           
+    
+                                </div>
+                                                     
+    
+                                </div>
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                            
+                    </div>
+                    <div class="kardiola-sale full-katalog__kardiola-sale">
+                        <div class="Like kardiola-sale__like">
+                            <img src="images/like_types/like.svg" >
+                        </div>
+                        <div class="stock kardiola-sale__stock stock_persik"><p class = "stock-text stock-text_white">топ продаж</p></div>
+                        <div class="swiper4 kardiola-sale__swiper4">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper4__swiper-slide">
+                                    <div class="swiper4__img">
+                                        <img src="images/brends/brends__img/kardiolla/omega3-kardiola.png" >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tochki kardiola-sale__tothki">
+                            <img src="images/brends/brends__img/five-tochek.svg" >
+                        </div>
+                        <div class="kardiola-sale__content">
+                            <p class = "slide-zagolovok slide-zagolovok_center-mobile">Омега-3 Кардиола</p>
+                            <div class="kardiola-sale__param-group">
+                                <p class = "podpis">30 таблеток</p>
+                                <p class ="podpis">700 mg</p>
+                            </div>
+                            <div class="kardiola-sale__opis">
+                                <p class = "text-cards">Омега-3 «60%» обеспечит организм достаточным количеством ПНЖК Омега-3 для нормального функционирования сердечно-сосудистой системы, хорошего самочувствия и ежедневной активности.</p>
+                            </div>
+                            <div class="abc-group">
+                                <div class="abc">
+                                    <div class="abc__img">
+                                        <img src="images/abc-images/Ellipse 152.svg" >
+                                    </div>
+                                    <p class = "links-menu abc__links-menu">Боярышник</p>
+                                </div>
+                                                     
+    
+                                </div>
+                        </div>
+                        <a href="" onmouseleave = "bluetextButton(this)" onmouseover = "whitetextButton(this)" class = "kardiola-sale__button" >
+                            <span class = "button-text button-text_blue-bolder">подробнее</span>
+                        </a>
+                            
+                    </div>
+                    <div class="full-katalog__nav-group">
+                        <div class="full-katalog__nav">
+                            <img src="images/navigation.png" alt="">
+                        </div>
+                        <a onmouseover = "bluetextButton(this)" onmouseleave = "whitetextButton(this)" href="#" class ="full-katalog__button">
+                            <span  class = "button-text button-text_white"> Показать еще</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
